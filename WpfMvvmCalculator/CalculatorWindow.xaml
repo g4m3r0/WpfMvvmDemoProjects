@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfMvvmCalculator.CalculatorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMvvmCalculator"
+        mc:Ignorable="d"
+        Title="CalculatorWindow" Height="600" Width="400">
+    <Window.DataContext>
+        <local:CalculatorWindowViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*" />
+            <RowDefinition Height="9*" />
+            <RowDefinition Height="9*" />
+            <RowDefinition Height="9*" />
+            <RowDefinition Height="9*" />
+            <RowDefinition Height="9*" />
+            <RowDefinition Height="9*" />
+            <RowDefinition Height="9*" />
+            <RowDefinition Height="53" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+        <TextBox Grid.ColumnSpan="6" FontSize="30" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding CurrentValue}" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="1" Content="1" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="1" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="2" Content="2" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="2" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="3" Content="3" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="3" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding OperatorCommand}" CommandParameter="+" Content="+" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="4" VerticalAlignment="Stretch"/>
+
+        <Button Command="{Binding NumberCommand}" CommandParameter="4" Content="4" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="5" Content="5" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="2" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="6" Content="6" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="3" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding OperatorCommand}" CommandParameter="-" Content="-" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="4" VerticalAlignment="Stretch"/>
+
+        <Button Command="{Binding NumberCommand}" CommandParameter="7" Content="7" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="1" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="8" Content="8" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="2" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="9" Content="9" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="3" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding OperatorCommand}" CommandParameter="*" Content="*" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="4" VerticalAlignment="Stretch"/>
+
+        <Button Command="{Binding NumberCommand}" CommandParameter="0" Content="0" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="5" Grid.Column="2" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding OperatorCommand}" CommandParameter="=" Content="=" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="5" Grid.Column="3" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding OperatorCommand}" CommandParameter="/" Content="/" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="5" Grid.Column="4" VerticalAlignment="Stretch"/>
+    </Grid>
+</Window>
