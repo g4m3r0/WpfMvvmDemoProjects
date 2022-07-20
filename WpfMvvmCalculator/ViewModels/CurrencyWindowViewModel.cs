@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfMvvmCalculator
+namespace WpfMvvmCalculator.ViewModels
 {
     public class CurrencyViewModel : BaseViewModel
     {
@@ -21,7 +21,7 @@ namespace WpfMvvmCalculator
                     OnPropertyChanged();
                     OnPropertyChanged(nameof(HasNonZeroValue));
                 }
-            } 
+            }
         }
 
         public bool HasNonZeroValue => Value != 0.0m;

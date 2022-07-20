@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfMvvmCalculator
+namespace WpfMvvmCalculator.ViewModels
 {
     public class CalculatorWindowViewModel : BaseViewModel
     {
@@ -13,18 +13,18 @@ namespace WpfMvvmCalculator
 
         public CalculatorWindowViewModel()
         {
-            this.NumberCommand = new DelegateCommand((value) =>
+            NumberCommand = new DelegateCommand((value) =>
             {
                 int val = int.Parse((string)value);
-                this.CurrentValue = this.CurrentValue * 10 + val;
+                CurrentValue = CurrentValue * 10 + val;
             });
-            this.OperatorCommand = new DelegateCommand((o) =>
+            OperatorCommand = new DelegateCommand((o) =>
             {
                 string op = (string)o;
 
                 if (op != "=")
                 {
-                    this.operatorToExecute = op;
+                    operatorToExecute = op;
                     lastValue = CurrentValue;
                     CurrentValue = 0.0;
                 }
@@ -62,7 +62,7 @@ namespace WpfMvvmCalculator
                 if (_currentValue != value)
                 {
                     _currentValue = value;
-                    this.OnPropertyChanged();
+                    OnPropertyChanged();
                 }
             }
         }
