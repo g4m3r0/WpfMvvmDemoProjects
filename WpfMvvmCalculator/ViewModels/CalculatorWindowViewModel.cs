@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace WpfMvvmCalculator.ViewModels
 {
-    public class CalculatorWindowObject : NotifyableBaseObject
+    public class CalculatorWindowViewModel : NotifyableBaseObject
     {
         private double lastValue;
         private string operatorToExecute;
 
-        public CalculatorWindowObject()
+        public CalculatorWindowViewModel()
         {
             NumberCommand = new DelegateCommand((value) =>
             {

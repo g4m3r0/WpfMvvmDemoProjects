@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="CalculatorWindow" Height="600" Width="400">
     <Window.DataContext>
-        <viewModels:CalculatorWindowObject />
+        <viewModels:CalculatorWindowViewModel />
     </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
