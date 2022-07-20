@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfMvvmCalculator"
+        xmlns:viewModels="clr-namespace:WpfMvvmCalculator.ViewModels"
         mc:Ignorable="d"
         Title="CalculatorWindow" Height="600" Width="400">
     <Window.DataContext>
-        <local:CalculatorWindowViewModel />
+        <viewModels:CalculatorWindowViewModel />
     </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
@@ -48,5 +49,6 @@
         <Button Command="{Binding NumberCommand}" CommandParameter="0" Content="0" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="5" Grid.Column="2" VerticalAlignment="Stretch"/>
         <Button Command="{Binding OperatorCommand}" CommandParameter="=" Content="=" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="5" Grid.Column="3" VerticalAlignment="Stretch"/>
         <Button Command="{Binding OperatorCommand}" CommandParameter="/" Content="/" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="5" Grid.Column="4" VerticalAlignment="Stretch"/>
+        <Button Content="" FontSize="30" Grid.Row="5" Grid.Column="1"/>
     </Grid>
 </Window>

@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfMvvmCalculator"
         xmlns:vc="clr-namespace:WpfMvvmCalculator.ValueConverters"
+        xmlns:viewModels="clr-namespace:WpfMvvmCalculator.ViewModels"
         mc:Ignorable="d"
         Title="CurrencyWindow" Height="140" Width="310">
     <Window.DataContext>
-        <local:CurrencyViewModel />
+        <viewModels:CurrencyViewModel />
     </Window.DataContext>
     <Window.Resources>
         <vc:CurrencyValueConverter x:Key="currency" />
