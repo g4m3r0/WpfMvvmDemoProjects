@@ -10,13 +10,22 @@ namespace WpfMvvmCalculator.ViewModels
 {
     public class PersonListWindowViewModel : NotifyableBaseObject
     {
+        public event EventHandler MissingData;
+
         public PersonListWindowViewModel()
         {
             this.AddPersonCommand = new DelegateCommand((o) =>
             {
                 // Will be called on button click
-                this.Persons.Add(NewPerson);
-                NewPerson = new PersonModel();
+                if (string.IsNullOrEmpty(NewPerson.FirstName) || string.IsNullOrEmpty(NewPerson.LastName) || string.IsNullOrEmpty(NewPerson.Department))
+                {
+                    MissingData?.Invoke(this, EventArgs.Empty);
+                }
+                else
+                {
+                    this.Persons.Add(NewPerson);
+                    NewPerson = new PersonModel();
+                }
             });
         }
 

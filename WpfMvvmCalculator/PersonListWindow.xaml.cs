@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfMvvmCalculator.ViewModels;
 
 namespace WpfMvvmCalculator
 {
@@ -22,6 +23,13 @@ namespace WpfMvvmCalculator
         public PersonListWindow()
         {
             InitializeComponent();
+            
+            ((PersonListWindowViewModel)DataContext).MissingData += (sender, eventArgs) => ShowErrorMessage();
+        }
+
+        public void ShowErrorMessage()
+        {
+            MessageBox.Show("Please enter a value at first name, last name and department.", "Missing Data!");
         }
     }
 }
