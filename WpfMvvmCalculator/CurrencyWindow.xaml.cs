@@ -15,16 +15,13 @@ using System.Windows.Shapes;
 namespace WpfMvvmCalculator
 {
     /// <summary>
-    /// Interaction logic for CalculatorWindow.xaml
+    /// Interaction logic for CurrencyWindow.xaml
     /// </summary>
-    public partial class CalculatorWindow : Window
+    public partial class CurrencyWindow : Window
     {
-        public CalculatorWindow()
+        public CurrencyWindow()
         {
             InitializeComponent();
-
-            var cWindow = new CurrencyWindow();
-            cWindow.Show();
         }
     }
 }
