@@ -24,7 +24,6 @@
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-
         </ListBox>
 
         <Grid Grid.Column="1" Margin="5 5 5 5">

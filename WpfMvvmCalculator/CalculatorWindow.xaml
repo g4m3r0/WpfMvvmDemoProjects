@@ -10,16 +10,18 @@
     <Window.DataContext>
         <viewModels:CalculatorWindowViewModel />
     </Window.DataContext>
+    <Window.Resources>
+        <ResourceDictionary Source="Resources/MyResources.xaml" />
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="9*" />
-            <RowDefinition Height="9*" />
-            <RowDefinition Height="9*" />
-            <RowDefinition Height="9*" />
-            <RowDefinition Height="9*" />
-            <RowDefinition Height="9*" />
-            <RowDefinition Height="9*" />
-            <RowDefinition Height="9*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="6*" />
             <RowDefinition Height="53" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -30,25 +32,32 @@
             <ColumnDefinition Width="5*" />
             <ColumnDefinition Width="5*" />
         </Grid.ColumnDefinitions>
+
+        <!--<Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Button.FontSize" Value="30" />
+            </Style>
+        </Grid.Resources>-->
+
         <TextBox Grid.ColumnSpan="6" FontSize="30" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding CurrentValue}" VerticalAlignment="Stretch"/>
-        <Button Command="{Binding NumberCommand}" CommandParameter="1" Content="1" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="1" VerticalAlignment="Stretch"/>
-        <Button Command="{Binding NumberCommand}" CommandParameter="2" Content="2" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="2" VerticalAlignment="Stretch"/>
-        <Button Command="{Binding NumberCommand}" CommandParameter="3" Content="3" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="3" VerticalAlignment="Stretch"/>
-        <Button Command="{Binding OperatorCommand}" CommandParameter="+" Content="+" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="4" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="1" Content="1" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="1" VerticalAlignment="Stretch" />
+        <Button Command="{Binding NumberCommand}" CommandParameter="2" Content="2" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="2" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="3" Content="3" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="3" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding OperatorCommand}" CommandParameter="+" Content="+" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="4" VerticalAlignment="Stretch"/>
 
-        <Button Command="{Binding NumberCommand}" CommandParameter="4" Content="4" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch"/>
-        <Button Command="{Binding NumberCommand}" CommandParameter="5" Content="5" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="2" VerticalAlignment="Stretch"/>
-        <Button Command="{Binding NumberCommand}" CommandParameter="6" Content="6" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="3" VerticalAlignment="Stretch"/>
-        <Button Command="{Binding OperatorCommand}" CommandParameter="-" Content="-" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="4" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="4" Content="4" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="5" Content="5" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="2" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="6" Content="6" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="3" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding OperatorCommand}" CommandParameter="-" Content="-" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="4" VerticalAlignment="Stretch"/>
 
-        <Button Command="{Binding NumberCommand}" CommandParameter="7" Content="7" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="1" VerticalAlignment="Stretch"/>
-        <Button Command="{Binding NumberCommand}" CommandParameter="8" Content="8" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="2" VerticalAlignment="Stretch"/>
-        <Button Command="{Binding NumberCommand}" CommandParameter="9" Content="9" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="3" VerticalAlignment="Stretch"/>
-        <Button Command="{Binding OperatorCommand}" CommandParameter="*" Content="*" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="4" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="7" Content="7" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="1" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="8" Content="8" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="2" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="9" Content="9" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="3" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding OperatorCommand}" CommandParameter="*" Content="*" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="4" VerticalAlignment="Stretch"/>
 
-        <Button Command="{Binding NumberCommand}" CommandParameter="0" Content="0" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="5" Grid.Column="2" VerticalAlignment="Stretch"/>
-        <Button Command="{Binding OperatorCommand}" CommandParameter="=" Content="=" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="5" Grid.Column="3" VerticalAlignment="Stretch"/>
-        <Button Command="{Binding OperatorCommand}" CommandParameter="/" Content="/" FontSize="30" HorizontalAlignment="Stretch" Grid.Row="5" Grid.Column="4" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding NumberCommand}" CommandParameter="0" Content="0" HorizontalAlignment="Stretch" Grid.Row="5" Grid.Column="2" VerticalAlignment="Stretch"/>
+        <Button Style="{StaticResource ColoredStyle}" Command="{Binding OperatorCommand}" CommandParameter="=" Content="=" HorizontalAlignment="Stretch" Grid.Row="5" Grid.Column="3" VerticalAlignment="Stretch"/>
+        <Button Command="{Binding OperatorCommand}" CommandParameter="/" Content="/" HorizontalAlignment="Stretch" Grid.Row="5" Grid.Column="4" VerticalAlignment="Stretch"/>
         <Button Content="" FontSize="30" Grid.Row="5" Grid.Column="1"/>
     </Grid>
 </Window>

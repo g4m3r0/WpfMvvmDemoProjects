@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="Button">
+        <Setter Property="Button.FontSize" Value="40" />
+    </Style>
+    <Style TargetType="Button" x:Key="ColoredStyleBackground" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="DarkGreen" />
+    </Style>
+    <Style TargetType="Button" x:Key="ColoredStyle" BasedOn="{StaticResource ColoredStyleBackground}">
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+</ResourceDictionary>
