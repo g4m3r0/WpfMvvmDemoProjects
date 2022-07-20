@@ -8,9 +8,9 @@ using WpfMvvmCalculator.Models;
 
 namespace WpfMvvmCalculator.ViewModels
 {
-    public class PersonListWindowViewModel : BaseViewModel
+    public class PersonListWindowObject : NotifyableBaseObject
     {
-        public PersonListWindowViewModel()
+        public PersonListWindowObject()
         {
             this.AddPersonCommand = new DelegateCommand((o) =>
             {

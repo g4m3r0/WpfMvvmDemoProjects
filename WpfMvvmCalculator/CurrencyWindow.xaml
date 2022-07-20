@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         Title="CurrencyWindow" Height="140" Width="310">
     <Window.DataContext>
-        <viewModels:CurrencyViewModel />
+        <viewModels:CurrencyObject />
     </Window.DataContext>
     <Window.Resources>
         <vc:CurrencyValueConverter x:Key="currency" />

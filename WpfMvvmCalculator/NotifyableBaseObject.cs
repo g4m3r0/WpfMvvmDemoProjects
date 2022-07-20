@@ -6,9 +6,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfMvvmCalculator.ViewModels
+namespace WpfMvvmCalculator
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class NotifyableBaseObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 
