@@ -10,6 +10,76 @@
     <Window.DataContext>
         <viewModels:PersonListWindowViewModel />
     </Window.DataContext>
+    <Window.Resources>
+        <Style TargetType="ListBoxItem">
+            <Setter Property="Opacity" Value="0.3" />
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsSelected" Value="False" />
+                        <Condition Property="IsMouseOver" Value="True" />
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.5" Storyboard.TargetProperty="Opacity" To="1.0" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </MultiTrigger.EnterActions>
+                    <MultiTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.5" Storyboard.TargetProperty="Opacity" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </MultiTrigger.ExitActions>
+                </MultiTrigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Trigger.Setters>
+                        <Setter Property="Opacity" Value="1.0" />
+                    </Trigger.Setters>
+                </Trigger>
+                <!--<Trigger Property="IsSelected" Value="True">
+                    <Trigger.Setters>
+                        <Setter Property="Opacity" Value="1.0" />
+                    </Trigger.Setters>
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetProperty="Opacity" To="1.0" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.4" Storyboard.TargetProperty="Opacity" To="0.3" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>-->
+
+                <!--<EventTrigger RoutedEvent="Mouse.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetProperty="Opacity" To="1.0" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>-->
+                <!--<EventTrigger RoutedEvent="Mouse.MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetProperty="Opacity" To="0.3" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>-->
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
@@ -39,14 +109,14 @@
                 <RowDefinition Height="100" />
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="0" Grid.Column="0" Content="First Name: " />
-            <TextBox Grid.Row="0" Grid.Column="1" Width="auto" Text="{Binding NewPerson.FirstName}" />
+            <Label VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Content="First Name: " />
+            <TextBox VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Width="auto" Text="{Binding NewPerson.FirstName}" />
 
-            <Label Grid.Row="1" Grid.Column="0" Content="Last Name: " />
-            <TextBox Grid.Row="1" Grid.Column="1" Width="auto" Text="{Binding NewPerson.LastName}" />
+            <Label VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Content="Last Name: " />
+            <TextBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="auto" Text="{Binding NewPerson.LastName}" />
 
-            <Label Grid.Row="2" Grid.Column="0" Content="Department: " />
-            <TextBox Grid.Row="2" Grid.Column="1" Width="auto"  Text="{Binding NewPerson.Department}" />
+            <Label VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Content="Department: " />
+            <TextBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Width="auto"  Text="{Binding NewPerson.Department}" />
 
             <Button Grid.Row="3" Grid.ColumnSpan="2" Height="50" Content="Add Person" Command="{Binding AddPersonCommand}" />
         </Grid>
