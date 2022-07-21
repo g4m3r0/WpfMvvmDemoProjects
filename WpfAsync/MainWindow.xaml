@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfAsync.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAsync"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainWindowViewModel />
+    </Window.DataContext>
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Button Margin="10" Content="Download Sync" Command="{Binding DownloadCmd}" />
+            <Button Margin="10" Content="Download Async" Command="{Binding DownloadCmdAsync}" />
+            <Button Margin="10" Content="Download Async in parallel" Command="{Binding DownloadCmdParallel}" />
+            <TextBox Margin="10" Height="300" Text="{Binding InfoText}"/>
+        </StackPanel>
+    </Grid>
+</Window>
