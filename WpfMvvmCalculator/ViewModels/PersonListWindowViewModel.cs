@@ -27,6 +27,30 @@ namespace WpfMvvmCalculator.ViewModels
                     NewPerson = new PersonModel();
                 }
             });
+
+            AddSampleData();
+        }
+
+        public void AddSampleData()
+        {
+            this.Persons.Add(new PersonModel()
+            {
+                Department = "Sales",
+                FirstName = "Max",
+                LastName = "Mustermann"
+            });
+            this.Persons.Add(new PersonModel()
+            {
+                Department = "CTO",
+                FirstName = "Tom",
+                LastName = "Mueller"
+            });
+            this.Persons.Add(new PersonModel()
+            {
+                Department = "Management",
+                FirstName = "Lara",
+                LastName = "Larsmann"
+            });
         }
 
         private ObservableCollection<PersonModel> _persons = new ObservableCollection<PersonModel>();
