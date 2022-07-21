@@ -1,7 +1,6 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
-namespace WpfMvvmCalculator
+namespace WpfBasics
 {
     public class DelegateCommand : ICommand
     {
