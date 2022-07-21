@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace WpfBasics
 {
-    public class NotifyableBaseObject : INotifyPropertyChanged
+    public class NotifiableBaseObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 

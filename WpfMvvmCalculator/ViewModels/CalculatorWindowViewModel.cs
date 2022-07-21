@@ -7,7 +7,7 @@ using WpfBasics;
 
 namespace WpfMvvmCalculator.ViewModels
 {
-    public class CalculatorWindowViewModel : NotifyableBaseObject
+    public class CalculatorWindowViewModel : NotifiableBaseObject
     {
         private double lastValue;
         private string operatorToExecute;

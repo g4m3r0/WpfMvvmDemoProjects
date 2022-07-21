@@ -7,7 +7,7 @@ using WpfBasics;
 
 namespace WpfMvvmCalculator.ViewModels
 {
-    public class CurrencyObject : NotifyableBaseObject
+    public class CurrencyObject : NotifiableBaseObject
     {
         private decimal _value;
 

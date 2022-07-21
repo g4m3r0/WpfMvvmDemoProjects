@@ -9,7 +9,7 @@ using WpfMvvmCalculator.Models;
 
 namespace WpfMvvmCalculator.ViewModels
 {
-    public class PersonListWindowViewModel : NotifyableBaseObject
+    public class PersonListWindowViewModel : NotifiableBaseObject
     {
         public event EventHandler MissingData;
 
