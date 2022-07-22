@@ -1,2 +1,3 @@
-# WpfMvvmCalculator
- WPF MVVM Demo Project - Calculator
+# WPF MVVM Demo Projects
+
+WPF MVVM Demo Projects - Calculator, Lists, Async actions
