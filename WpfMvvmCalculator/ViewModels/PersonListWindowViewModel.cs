@@ -11,7 +11,7 @@ namespace WpfMvvmCalculator.ViewModels
 {
     public class PersonListWindowViewModel : NotifiableBaseObject
     {
-        public event EventHandler MissingData;
+        public event EventHandler? MissingData;
 
         public PersonListWindowViewModel()
         {
