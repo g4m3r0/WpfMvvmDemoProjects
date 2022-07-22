@@ -13,7 +13,7 @@
         <StackPanel>
             <Button Content="Add new Person" Command="{Binding AddNewPersonCommand}" />
             <Label Content="Search" />
-            <TextBox Width="auto" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Width="auto" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged, Delay=1000}" />
             <ListBox ItemsSource="{Binding FilteredPersons}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
