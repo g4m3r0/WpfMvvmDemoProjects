@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using WpfBasics;
 
@@ -13,7 +14,13 @@ namespace WpfMvvmWindows
         //public event EventHandler OpenDialog;
 
         public delegate (string name, string email) OpenDialogHandler(string name, string email);
+
+        public delegate MessageBoxResult OpenMessageBoxHandler(string title, string message);
         public OpenDialogHandler OpenDialog { get; set; }
+        public OpenMessageBoxHandler OpenMessageBox { get; set; }
+
+        public DelegateCommand OpenMessageBoxCommand { get; set; }
+        public ICommand OpenDialogCommand { get; init; }
 
         public MainWindowViewModel()
         {
@@ -22,9 +29,19 @@ namespace WpfMvvmWindows
                 //this.OpenDialog?.Invoke(this, EventArgs.Empty);
                 (Name, Email) = OpenDialog(this.Name, this.Email);
             });
-        }
 
-        public ICommand OpenDialogCommand { get; init; }
+            this.OpenMessageBoxCommand = new DelegateCommand((o) =>
+            {
+                if (this.OpenMessageBox("Title", "This is a the messagebox text!") == MessageBoxResult.Yes)
+                {
+                    Name = "MessageBox YES";
+                }
+                else
+                {
+                    Name = "MessageBox NO";
+                }
+            });
+        }
 
         private string _name;
 

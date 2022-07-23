@@ -38,6 +38,9 @@ namespace WpfMvvmWindows
                 }
                 return (string.Empty, string.Empty);
             };
+
+            vm.OpenMessageBox = (title, message) => MessageBox.Show(title, message, MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes);
+
             //vm.OpenDialog += (sender, e) =>
             //{
             //    DialogWindow dialogWindow = new DialogWindow();

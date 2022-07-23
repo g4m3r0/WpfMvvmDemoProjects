@@ -11,9 +11,10 @@
     </Window.DataContext>
     <Grid>
         <StackPanel>
-            <Button Content="Open Dialog" Command="{Binding OpenDialogCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225"/>
+            <Button Content="Open Dialog Modal" Command="{Binding OpenDialogCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225"/>
             <Label Content="{Binding Name}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="195"/>
             <Label Content="{Binding Email}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="195"/>
+            <Button Content="Open Messagebox" Command="{Binding OpenMessageBoxCommand}" />
         </StackPanel>
     </Grid>
 </Window>
