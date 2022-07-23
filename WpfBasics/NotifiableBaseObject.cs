@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace WpfBasics
+namespace WpfMvvmBase
 {
     public class NotifiableBaseObject : INotifyPropertyChanged
     {

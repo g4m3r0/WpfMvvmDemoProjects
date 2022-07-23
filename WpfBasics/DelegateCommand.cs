@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace WpfBasics
+namespace WpfMvvmBase
 {
     public class DelegateCommand : ICommand
     {

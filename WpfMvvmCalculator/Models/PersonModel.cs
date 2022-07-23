@@ -1,4 +1,4 @@
-﻿using WpfBasics;
+﻿using WpfMvvmBase;
 
 namespace WpfMvvmCalculator.Models
 {
