@@ -5,13 +5,13 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfMvvmCalculator", "WpfMvvmCalculator\WpfMvvmCalculator.csproj", "{55AC173F-5D62-4CCF-BC8D-DC9891C09631}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfMvvmBase", "WpfBasics\WpfMvvmBase.csproj", "{E76A2C32-CD44-4180-A36E-2DFDF2384605}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfAsync", "WpfAsync\WpfAsync.csproj", "{07F645A6-5407-4E90-8794-7BDBC91B064A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfMvvmListFilter", "WpfMvvmListFilter\WpfMvvmListFilter.csproj", "{DE007CA4-C72D-450B-BDE5-8EA8EF8222F8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfMvvmWindows", "WpfMvvmWindows\WpfMvvmWindows.csproj", "{8952F4C6-0357-4D26-BBD5-75A4662CF8DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfMvvmBase", "..\WpfMvvmBase\WpfMvvmBase\WpfMvvmBase.csproj", "{45AA65A9-EB9A-4D63-8CD4-5C5894D7FDE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{55AC173F-5D62-4CCF-BC8D-DC9891C09631}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55AC173F-5D62-4CCF-BC8D-DC9891C09631}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55AC173F-5D62-4CCF-BC8D-DC9891C09631}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E76A2C32-CD44-4180-A36E-2DFDF2384605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E76A2C32-CD44-4180-A36E-2DFDF2384605}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E76A2C32-CD44-4180-A36E-2DFDF2384605}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E76A2C32-CD44-4180-A36E-2DFDF2384605}.Release|Any CPU.Build.0 = Release|Any CPU
 		{07F645A6-5407-4E90-8794-7BDBC91B064A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{07F645A6-5407-4E90-8794-7BDBC91B064A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07F645A6-5407-4E90-8794-7BDBC91B064A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{8952F4C6-0357-4D26-BBD5-75A4662CF8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8952F4C6-0357-4D26-BBD5-75A4662CF8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8952F4C6-0357-4D26-BBD5-75A4662CF8DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45AA65A9-EB9A-4D63-8CD4-5C5894D7FDE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45AA65A9-EB9A-4D63-8CD4-5C5894D7FDE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45AA65A9-EB9A-4D63-8CD4-5C5894D7FDE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45AA65A9-EB9A-4D63-8CD4-5C5894D7FDE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
