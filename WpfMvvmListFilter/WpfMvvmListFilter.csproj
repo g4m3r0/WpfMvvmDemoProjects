@@ -8,7 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\WpfMvvmBase\WpfMvvmBase\WpfMvvmBase.csproj" />
+    <PackageReference Include="GSL.Util.WpfMvvmBase" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WpfMvvmCalculator\WpfMvvmCalculator.csproj" />
   </ItemGroup>
 
