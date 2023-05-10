@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfMvvmWindows", "WpfMvvmWi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfMvvmUserControls", "WpfMvvmUserControls\WpfMvvmUserControls.csproj", "{3198F212-BA83-4FCE-A344-70BFAD34B13C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfReactiveUI", "WpfReactiveUI\WpfReactiveUI.csproj", "{938CA23E-E241-4A73-9DE7-4A7CB3468845}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3198F212-BA83-4FCE-A344-70BFAD34B13C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3198F212-BA83-4FCE-A344-70BFAD34B13C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3198F212-BA83-4FCE-A344-70BFAD34B13C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{938CA23E-E241-4A73-9DE7-4A7CB3468845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{938CA23E-E241-4A73-9DE7-4A7CB3468845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{938CA23E-E241-4A73-9DE7-4A7CB3468845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{938CA23E-E241-4A73-9DE7-4A7CB3468845}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
